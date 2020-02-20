@@ -5,8 +5,6 @@ const fruits = [
 ];
 
 const content = document.querySelector('.container');
-const contentFruits = content.querySelector('.row');
-contentFruits.addEventListener('click', showMePrice);
 
 (function () {
   const row = document.createElement('div');
@@ -29,6 +27,9 @@ contentFruits.addEventListener('click', showMePrice);
   });
   content.append(row);
 }());
+
+const contentFruits = content.querySelector('.row');
+contentFruits.addEventListener('click', showMePrice);
 
 function showMePrice(e) {
   const id = e.target.dataset.id;

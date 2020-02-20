@@ -2,7 +2,7 @@ Element.prototype.appendAfter = function (element) {
   element.parentNode.insertBefore(this, element.nextSibling);
 };
 
-function noop() {}//глушилка
+function noop() {}
 
 function _createModalFooter(buttons = []) {
   if (buttons.length === 0) return false;
@@ -49,7 +49,7 @@ function _createModal(options) {
 $.modal = function (options) {
   const ANIMATION_SPEED = 200;
   const $modal = _createModal(options);
-  let closing = false; //чтоб не открыть модальное окно пока оно полностью не закроется
+  let closing = false;
   
   const modal = {
     open() {

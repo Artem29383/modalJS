@@ -32,6 +32,7 @@ const contentFruits = content.querySelector('.row');
 contentFruits.addEventListener('click', showMePrice);
 
 function showMePrice(e) {
+  e.preventDefault();
   const id = e.target.dataset.id;
   modal.setContent(`
   <h4>Цена ${fruits[id-1].price}</h4>
